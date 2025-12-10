@@ -4,9 +4,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import PaymentButton from "@/components/Payment/PaymentButton";
 import type { Metadata } from "next";
-
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
 
 export const metadata: Metadata = {
   title: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",
@@ -48,13 +46,14 @@ export const metadata: Metadata = {
 };
 
 
-export default function Home() {
+
+export default function HindiHome() {
   return (
     <main>
-      <Hero lang="en" />
-       <Services lang="en" />
-       <Testimonials lang="en" />
-       <ContactSection lang="en" />
+      <Hero lang="hi" />
+      <Services lang="hi" />
+      <Testimonials lang="en" />
+      <ContactSection lang="en" />
     </main>
   );
 }
