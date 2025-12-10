@@ -11,32 +11,32 @@ type ContactSectionProps = {
 export default function ContactSection({ lang }: ContactSectionProps) {
   const content = {
     en: {
-      title: "Contact Us",
+      title: "Get in Touch",
       desc:
-        "Need help improving your CIBIL score or fixing your credit report? Contact us today.",
+        "Have questions about your CIBIL score? Fill out the form below and we'll get back to you shortly.",
       callText: "Call Now",
       whatsappText: "WhatsApp Chat",
       formName: "Your Name",
       formPhone: "Phone Number",
       formMessage: "Your Message",
-      submit: "Submit",
+      submit: "Send Message",
       sending: "Sending...",
-      success: "Thanks — we received your message. We will contact you shortly.",
-      error: "Something went wrong. Please try again later.",
+      success: "Thanks for your message! We'll be in touch soon.",
+      error: "Something went wrong. Please try again.",
     },
     hi: {
       title: "संपर्क करें",
       desc:
-        "अपना CIBIL Score सुधारने या क्रेडिट रिपोर्ट ठीक कराने में सहायता चाहिए? आज ही संपर्क करें।",
+        "CIBIL स्कोर के बारे में कोई प्रश्न है? नीचे दिया गया फ़ॉर्म भरें और हम जल्द ही आपसे संपर्क करेंगे।",
       callText: "अभी कॉल करें",
       whatsappText: "WhatsApp चैट",
       formName: "आपका नाम",
       formPhone: "फ़ोन नंबर",
       formMessage: "आपका संदेश",
-      submit: "सबमिट करें",
+      submit: "संदेश भेजें",
       sending: "भेजा जा रहा है...",
-      success: "धन्यवाद — आपका संदेश मिल गया है। हम शीघ्र संपर्क करेंगे।",
-      error: "कुछ गलत हुआ। कृपया बाद में पुनः प्रयास करें।",
+      success: "आपके संदेश के लिए धन्यवाद! हम जल्द ही संपर्क में रहेंगे।",
+      error: "कुछ गलत हुआ। कृपया दोबारा कोशिश करें।",
     },
   };
 
@@ -134,45 +134,43 @@ export default function ContactSection({ lang }: ContactSectionProps) {
 
 
   return (
-    <section id="contact" className="w-full py-20 bg-white px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+    <section id="contact" className="w-full py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           {t.title}
         </h2>
-        <p className="text-gray-700">{t.desc}</p>
+        <p className="text-xl text-gray-600">{t.desc}</p>
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* left: compact profile — tighter spacing */}
-          <div className="md:col-span-1 flex flex-col items-center md:items-start gap-2">
+          <div className="flex flex-col items-center text-center">
             <img
               src="/myphoto.jpg"
               alt="CA Anurag Tripathi"
-              className="w-24 h-24 rounded-full object-cover shadow-md"     /* was w-28 h-28 */
+              className="w-32 h-32 rounded-full object-cover shadow-2xl mb-6"
             />
 
-            <div className="text-center md:text-left">
-              <div className="text-lg font-semibold text-gray-900">CA Anurag Tripathi</div>
-              <div className="text-sm text-gray-600">Chartered Accountant</div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gray-900">CA Anurag Tripathi</div>
+              <div className="text-lg text-gray-600 mb-6">Chartered Accountant</div>
 
-              {/* compact vertical stack for CTAs */}
-              <div className="mt-2 flex flex-col gap-2">                       {/* replaced mt-3 + mt-4 separate blocks */}
+              <div className="flex flex-col gap-4">
                 <a
                   href="tel:+919530064071"
-                  className="inline-block bg-blue-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-blue-700 transition text-sm"
+                  className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg"
                 >
                   +91 95300 64071
                 </a>
 
                 <a
                   href="https://wa.me/919530064071"
-                  className="inline-block bg-green-600 text-white px-3 py-2 rounded-lg font-medium hover:bg-green-700 transition text-sm"
+                  className="inline-block bg-secondary text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-secondary-dark transition shadow-lg"
                 >
                   {t.whatsappText}
                 </a>
 
-                {/* Payment CTA for consultations — keep same small spacing */}
-                <div className="pt-1">
+                <div className="pt-2">
                   <PaymentButton amount={1499} description="CIBIL consultation fee ₹1499" />
                 </div>
               </div>
@@ -180,66 +178,63 @@ export default function ContactSection({ lang }: ContactSectionProps) {
           </div>
 
         {/* right: form */}
-        <div className="md:col-span-2">
+        <div className="bg-white rounded-xl shadow-2xl p-8">
           <form
             id="contactForm"
             onSubmit={handleSubmit}
-            className="bg-gray-50 border rounded-lg p-6 flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
-            <label className="sr-only" htmlFor="name">{t.formName}</label>
-            <input
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              type="text"
-              placeholder={t.formName}
-              className="border border-gray-300 p-3 rounded w-full bg-white text-gray-900 placeholder-gray-500"
-              required
-            />
-
-            <label className="sr-only" htmlFor="phone">{t.formPhone}</label>
-            <input
-              id="phone"
-              name="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              type="tel"
-              placeholder={t.formPhone}
-              className="border border-gray-300 p-3 rounded w-full bg-white text-gray-900 placeholder-gray-500"
-              required
-            />
-
-            <label className="sr-only" htmlFor="message">{t.formMessage}</label>
-            <textarea
-              id="message"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder={t.formMessage}
-              className="border border-gray-300 p-3 rounded w-full h-36 bg-white text-gray-900 placeholder-gray-500"
-              required
-            />
-
-            <div className="flex flex-col md:flex-row gap-4">
-              <button
-                type="submit"
-                disabled={loading}
-                className="flex-1 bg-black text-white py-3 rounded font-semibold hover:bg-gray-800 transition"
-              >
-                {loading ? t.sending : t.submit}
-              </button>
-
-              <a
-                href="tel:+919530064071"
-                className="flex-1 text-center bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition"
-              >
-                {t.callText}
-              </a>
+            <div>
+                <label className="sr-only" htmlFor="name">{t.formName}</label>
+                <input
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                  placeholder={t.formName}
+                  className="border border-gray-300 p-4 rounded-lg w-full bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
             </div>
 
-            {statusMsg && <div className="text-green-700 mt-2">{statusMsg}</div>}
-            {error && <div className="text-red-600 mt-2">{error}</div>}
+            <div>
+                <label className="sr-only" htmlFor="phone">{t.formPhone}</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  type="tel"
+                  placeholder={t.formPhone}
+                  className="border border-gray-300 p-4 rounded-lg w-full bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+            </div>
+
+            <div>
+                <label className="sr-only" htmlFor="message">{t.formMessage}</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder={t.formMessage}
+                  className="border border-gray-300 p-4 rounded-lg w-full h-40 bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg"
+            >
+              {loading ? t.sending : t.submit}
+            </button>
+
+            {statusMsg && <div className="text-green-700 mt-2 text-center">{statusMsg}</div>}
+            {error && <div className="text-red-600 mt-2 text-center">{error}</div>}
           </form>
         </div>
       </div>

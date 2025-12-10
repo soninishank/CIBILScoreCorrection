@@ -2,7 +2,6 @@ import Hero from "@/components/Hero/Hero";
 import Services from "@/components/Services/Services";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import ContactSection from "@/components/ContactSection/ContactSection";
-import PaymentButton from "@/components/Payment/PaymentButton";
 import type { Metadata } from "next";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";

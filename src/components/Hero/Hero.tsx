@@ -23,25 +23,25 @@ export default function Hero({ lang }: HeroProps) {
   const t = content[lang];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-50">
-      <div className="max-w-2xl">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-100">
+      <div className="max-w-3xl">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
           {t.title}
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-700 mb-8">{t.subtitle}</p>
+        <p className="text-xl md:text-2xl text-gray-600 mb-10">{t.subtitle}</p>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
           <a
-            href="tel:+91XXXXXXXXXX"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
+            href="tel:+919530064071"
+            className="bg-primary text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-primary-dark transition-transform transform hover:scale-105 shadow-lg"
           >
             {t.callText}
           </a>
 
           <a
-            href="https://wa.me/91XXXXXXXXXX"
-            className="bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition"
+            href="https://wa.me/919530064071"
+            className="bg-secondary text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-secondary-dark transition-transform transform hover:scale-105 shadow-lg"
           >
             {t.whatsappText}
           </a>

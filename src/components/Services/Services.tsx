@@ -52,20 +52,22 @@ export default function Services({ lang }: ServicesProps) {
   const t = content[lang];
 
   return (
-    <section id="services" className="w-full py-20 bg-white px-6">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-        {t.title}
-      </h2>
+    <section id="services" className="w-full py-24 bg-gray-100 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+          {t.title}
+        </h2>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {t.items.map((item, index) => (
-          <div key={index} className="p-6 border rounded-lg shadow-sm bg-gray-50">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {item.title}
-            </h3>
-            <p className="text-gray-600">{item.desc}</p>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {t.items.map((item, index) => (
+            <div key={index} className="bg-white p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+              <h3 className="text-2xl font-bold text-primary mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 text-lg">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

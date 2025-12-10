@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 import type { Metadata } from "next";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -26,11 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative bg-white">
+      <body className="relative bg-gray-100 text-gray-800">
         <Header />
-        <div className="pt-20">
+        <main className="pt-20">
             {children}
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );
