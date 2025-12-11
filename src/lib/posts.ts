@@ -68,9 +68,9 @@ export async function getPostBySlug(lang: "en" | "hi", slug: string) {
   if (!fs.existsSync(file)) return null;
 
   const raw = fs.readFileSync(file, "utf8");
-  const { data, content } = matter(raw);
+  const { data, content: rawContent } = matter(raw);
 
-  const htmlContent = await markdownToHtml(content);
+  const htmlContent = await markdownToHtml(rawContent);
 
   const meta: PostMeta = {
     title: String(data.title || ""),
@@ -81,5 +81,5 @@ export async function getPostBySlug(lang: "en" | "hi", slug: string) {
     image: data.image || "",
   };
 
-  return { meta, content: htmlContent };
+  return { meta, content: htmlContent, rawContent };
 }
