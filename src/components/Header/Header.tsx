@@ -15,9 +15,9 @@ export default function Header() {
             <nav className="hidden md:flex gap-8 text-lg text-gray-700 font-medium">
                 <a href={isHindi ? "/hi" : "/"} className="hover:text-primary-dark transition-colors">Home</a>
                 <a href={isHindi ? "/hi/blog" : "/blog"} className="hover:text-primary-dark transition-colors">Blogs</a>
-                <a href="/#services" className="hover:text-primary-dark transition-colors">Services</a>
-                <a href="/#testimonials" className="hover:text-primary-dark transition-colors">Testimonials</a>
-                <a href="/#contact" className="hover:text-primary-dark transition-colors">Contact</a>
+                <a href={isHindi ? "/hi#services" : "/#services"} className="hover:text-primary-dark transition-colors">Services</a>
+                <a href={isHindi ? "/hi#testimonials" : "/#testimonials"} className="hover:text-primary-dark transition-colors">Testimonials</a>
+                <a href={isHindi ? "/hi#contact" : "/#contact"} className="hover:text-primary-dark transition-colors">Contact</a>
             </nav>
             <div className="hidden md:flex gap-3 text-gray-900 font-medium relative">
                 <LanguageSwitcher />
