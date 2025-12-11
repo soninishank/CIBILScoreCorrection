@@ -29,9 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { meta } = post;
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
   const url = `${SITE_URL}/blog/${meta.slug}`;
+  const hiUrl = `${SITE_URL}/hi/blog/${meta.slug}`;
 
   return {
-    title: `${meta.title} — CIBIL Thik Kare`,
+    title: meta.title, // Title template will be applied from layout
     description: meta.description || "",
     openGraph: {
       title: meta.title,
@@ -39,6 +40,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       images: meta.image ? [{ url: `${SITE_URL}${meta.image}`, width: 1200, height: 630 }] : undefined,
       type: "article",
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        "hi": hiUrl,
+      },
     },
   };
 }
