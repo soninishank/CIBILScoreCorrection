@@ -9,19 +9,27 @@ export default function Services({ lang }: ServicesProps) {
       items: [
         {
           title: "CIBIL Score Improvement",
-          desc: "Personalized guidance to increase your score quickly and safely.",
+          desc: "<ul><li>Personalized guidance to increase your score</li><li>Quickly and safely improve your credit health</li></ul>",
         },
         {
-          title: "Credit Report Analysis",
-          desc: "Identify problems in your report and fix them professionally.",
+          title: "Taxation Services",
+          desc: "<ul><li>Income tax planning and optimization</li><li>Filing of ITR (individual & corporate)</li><li>GST registration, filing, and compliance</li><li>TDS/TCS return filing</li><li>Representation during tax audits and assessments</li></ul>",
         },
         {
-          title: "Loan Rejection Assistance",
-          desc: "Understand why your loan was rejected and get a clear solution.",
+          title: "Accounting & Bookkeeping",
+          desc: "<ul><li>Complete bookkeeping and ledger management</li><li>Preparation of P&L accounts and balance sheets</li><li>Payroll accounting and Form 16 help</li></ul>",
         },
         {
-          title: "Dispute & Error Removal",
-          desc: "Remove incorrect entries like DPD, settled status, written-off, etc.",
+          title: "Audit & Assurance",
+          desc: "<ul><li>Statutory, internal, and compliance audits</li><li>Due diligence audits for mergers or investments</li></ul>",
+        },
+        {
+          title: "Loan & Funding Support",
+          desc: "<ul><li>Support for Retail, Business, and Home Loans</li><li>Preparation of project reports and CMA data</li><li>Financial ratio analysis to improve loan eligibility</li></ul>",
+        },
+        {
+          title: "Business Registration & Compliance",
+          desc: "<ul><li>Company/LLP/Partnership registration</li><li>ROC filings and annual compliance</li><li>GST registration and business onboarding</li></ul>",
         },
       ],
     },
@@ -31,19 +39,27 @@ export default function Services({ lang }: ServicesProps) {
       items: [
         {
           title: "CIBIL Score सुधार",
-          desc: "आपकी प्रोफ़ाइल के अनुसार स्कोर जल्दी और सुरक्षित तरीके से बढ़ाने का मार्गदर्शन।",
+          desc: "<ul><li>आपकी प्रोफ़ाइल के अनुसार स्कोर बढ़ाने का मार्गदर्शन</li><li>जल्दी और सुरक्षित तरीके से क्रेडिट स्वास्थ्य में सुधार</li></ul>",
         },
         {
-          title: "क्रेडिट रिपोर्ट विश्लेषण",
-          desc: "रिपोर्ट में मौजूद समस्याओं की पहचान और उन्हें प्रोफ़ेशनली ठीक करवाना।",
+          title: "कराधान सेवाएं (Taxation Services)",
+          desc: "<ul><li>आयकर योजना और अनुकूलन</li><li>ITR दाखिल करना (व्यक्तिगत और कॉर्पोरेट)</li><li>GST पंजीकरण, फाइलिंग और अनुपालन</li><li>TDS/TCS रिटर्न फाइलिंग</li><li>कर ऑडिट और मूल्यांकन के दौरान प्रतिनिधित्व</li></ul>",
         },
         {
-          title: "लोन रिजेक्शन सहायता",
-          desc: "जानें कि लोन क्यों रिजेक्ट हुआ और उसका समाधान प्राप्त करें।",
+          title: "लेखा और बहीखाता (Accounting & Bookkeeping)",
+          desc: "<ul><li>पूर्ण बहीखाता और खाता बही प्रबंधन</li><li>P&L खाते और बैलेंस शीट तैयार करना</li><li>पेरोल लेखा और फॉर्म 16 सहायता</li></ul>",
         },
         {
-          title: "विवाद एवं त्रुटि सुधार",
-          desc: "ग़लत एंट्री जैसे DPD, Settled, Written-off आदि को हटवाएं।",
+          title: "ऑडिट और आश्वासन (Audit & Assurance)",
+          desc: "<ul><li>वैधानिक, आंतरिक, और अनुपालन ऑडिट</li><li>विलय या निवेश के लिए उचित परिश्रम ऑडिट</li></ul>",
+        },
+        {
+          title: "ऋण और धन सहायता (Loan & Funding Support)",
+          desc: "<ul><li>रिटेल, बिजनेस और होम लोन के लिए सहायता</li><li>परियोजना रिपोर्ट, CMA डेटा तैयार करना</li><li>ऋण पात्रता में सुधार के लिए वित्तीय अनुपात विश्लेषण</li></ul>",
+        },
+        {
+          title: "व्यापार पंजीकरण और अनुपालन",
+          desc: "<ul><li>कंपनी/एलएलपी/साझेदारी पंजीकरण</li><li>आरओसी फाइलिंग और वार्षिक अनुपालन</li><li>जीएसटी पंजीकरण और व्यापार ऑनबोर्डिंग</li></ul>",
         },
       ],
     },
@@ -58,15 +74,20 @@ export default function Services({ lang }: ServicesProps) {
           {t.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.items.map((item, index) => (
-            <div key={index} className="bg-white p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-lg">{item.desc}</p>
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {t.items.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4">
+                  {item.title}
+                </h3>
+                <div className="text-gray-600 text-lg blog-content" dangerouslySetInnerHTML={{ __html: item.desc }} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
