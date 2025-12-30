@@ -154,7 +154,7 @@ export default async function PostPage(props: Props) {
                     Don't struggle with errors alone. I can help you dispute incorrect entries and boost your score.
                   </p>
                   <a
-                    href="https://wa.me/919530064071"
+                    href="https://wa.me/918290264071"
                     target="_blank"
                     className="inline-block px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-all shadow-md"
                   >

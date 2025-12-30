@@ -47,4 +47,4 @@ Rebuilding your CIBIL score after a settlement requires patience and discipline.
 
 If you need a personalized plan to improve your score after a settlement, our experts can help.
 
-**Contact us for a consultation: Call / WhatsApp at +91 95300 64071**
+**Contact us for a consultation: Call / WhatsApp at +91 82902 64071**

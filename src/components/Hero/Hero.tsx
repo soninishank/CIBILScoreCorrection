@@ -33,14 +33,14 @@ export default function Hero({ lang }: HeroProps) {
 
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           <a
-            href="tel:+919530064071"
+            href="tel:+918290264071"
             className="bg-primary text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-primary-dark transition-transform transform hover:scale-105 shadow-lg"
           >
             {t.callText}
           </a>
 
           <a
-            href="https://wa.me/919530064071"
+            href="https://wa.me/918290264071"
             className="bg-secondary text-white px-8 py-4 rounded-lg text-xl font-bold hover:bg-secondary-dark transition-transform transform hover:scale-105 shadow-lg"
           >
             {t.whatsappText}

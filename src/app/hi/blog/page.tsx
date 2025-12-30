@@ -27,7 +27,13 @@ export default function BlogPageHi() {
             {p.image && (
               <Link href={`/hi/blog/${p.slug}`}>
                 <div className="relative h-56 w-full">
-                  <Image src={p.image} alt={p.title} layout="fill" objectFit="cover" />
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
               </Link>
             )}

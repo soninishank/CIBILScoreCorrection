@@ -155,7 +155,7 @@ export default async function PostPageHi(props: Props) {
                     गलतियों से अकेले न जूझें। मैं गलत प्रविष्टियों पर विवाद करने और आपका स्कोर बढ़ाने में आपकी मदद कर सकता हूं।
                   </p>
                   <a
-                    href="https://wa.me/919530064071"
+                    href="https://wa.me/918290264071"
                     target="_blank"
                     className="inline-block px-8 py-4 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition-all shadow-md"
                   >

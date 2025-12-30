@@ -3,6 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import type { Metadata } from "next";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +19,7 @@ const geistMono = Geist_Mono({
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",
     template: "%s | CIBIL Thik Kare",
@@ -84,12 +86,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative bg-gray-100 text-gray-800">
+      <body className={`relative bg-gray-100 text-gray-800 ${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <main className="pt-20">
           {children}
         </main>
         <Footer />
+        <GoogleAnalytics gaId="G-PLACEHOLDER" />
       </body>
     </html>
   );
