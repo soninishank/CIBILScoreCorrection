@@ -7,14 +7,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const enPosts = getAllPostsMeta("en").map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: "weekly" as "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
   const hiPosts = getAllPostsMeta("hi").map((post) => ({
     url: `${siteUrl}/hi/blog/${post.slug}`,
     lastModified: new Date(post.date),
-    changeFrequency: "weekly" as "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily" as "daily",
       priority: 1.0,
     },
-     {
+    {
       url: `${siteUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "daily" as "daily",

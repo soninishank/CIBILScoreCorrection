@@ -9,7 +9,14 @@ export const metadata: Metadata = {
   title: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",
   description:
     "Professional CIBIL score repair, credit report correction and loan rejection assistance. Get expert help to fix errors and improve your credit score.",
-  keywords: ["CIBIL", "CIBIL score", "credit repair", "credit report", "loan assistance", "CIBIL सुधार"],
+  keywords: [
+    "CIBIL", "CIBIL score", "credit repair", "credit report", "loan assistance", "CIBIL सुधार",
+    "cibil full form", "free cibil score", "cibil report", "cibil dispute", "paisabazaar cibil",
+    "consumer cibil", "cibil score check", "transunion cibil",
+    "सिबिल स्कोर चेक ऑनलाइन फ्री", "cibil score kaise check kare", "cibil score kaise check kare mobile se",
+    "mera cibil score kitna hai", "cibil check karne wala app", "cibil score kaise check kare in hindi",
+    "cibil score kaise check hota hai", "आधार कार्ड से सिविल कैसे चेक करें"
+  ],
   openGraph: {
     title: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",
     description:
@@ -28,9 +35,9 @@ export const metadata: Metadata = {
   },
   // canonical + language alternates
   alternates: {
-    canonical: `${SITE_URL}/`,
+    canonical: `${SITE_URL}/hi`,
     languages: {
-      "hi": `${SITE_URL}/hi`,
+      "en": `${SITE_URL}/`,
     },
   },
   robots: {

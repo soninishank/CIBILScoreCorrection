@@ -6,6 +6,12 @@ import Image from 'next/image';
 export const metadata = {
   title: "ब्लॉग — CIBIL ठीक करें",
   description: "CIBIL स्कोर, क्रेडिट रिपोर्ट और लोन सहायता पर लेख।",
+  alternates: {
+    canonical: `/hi/blog`,
+    languages: {
+      "en": `/blog`,
+    },
+  },
 };
 
 export default function BlogPageHi() {

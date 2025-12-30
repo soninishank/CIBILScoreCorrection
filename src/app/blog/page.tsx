@@ -6,6 +6,12 @@ import Image from 'next/image';
 export const metadata = {
   title: "Blog — CIBIL Thik Kare",
   description: "Articles about CIBIL score, credit repair and loan approvals.",
+  alternates: {
+    canonical: `/blog`,
+    languages: {
+      "hi": `/hi/blog`,
+    },
+  },
 };
 
 export default function BlogPage() {
