@@ -79,12 +79,13 @@ export default function Services({ lang }: ServicesProps) {
             {t.items.map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-8 border rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2"
+                className="bg-white p-8 border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
               >
-                <h3 className="text-2xl font-bold text-primary mb-4">
+                <div className="h-2 w-12 bg-primary rounded-full mb-6 group-hover:w-20 transition-all duration-300"></div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <div className="text-gray-600 text-lg blog-content" dangerouslySetInnerHTML={{ __html: item.desc }} />
+                <div className="text-gray-600 text-lg blog-content leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }} />
               </div>
             ))}
           </div>

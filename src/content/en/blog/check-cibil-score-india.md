@@ -67,6 +67,17 @@ Yes, several third-party apps allow you to check your score for free. These are 
 *   **Amazon Pay:** Go to Amazon Pay dashboard > Click on "Free Credit Score".
 *   **OneScore:** A dedicated app for monitoring credit scores from both CIBIL and Experian.
 
+## Frequently Asked Questions (FAQs)
+
+### Can I check my CIBIL score by PAN card without OTP?
+Generally, **no**. For security reasons, CIBIL and authorized partners require OTP verification to ensure the person accessing the confidential credit report is indeed you. However, some banking apps where you are *already logged in* might show your score without an additional SMS OTP because you are already authenticated in the app session.
+
+### How to check CIBIL score in PhonePe?
+PhonePe also offers a facility to check your credit score. Open the PhonePe app, go to the "Credit" tab (usually at the bottom), and click on "Credit Score". First-time users will need to enter their PAN card details.
+
+### How to check CIBIL score in GPay?
+Google Pay (GPay) allow you to check your score for free. Navigate to the "Manage your money" section and tap on "Check your CIBIL score for free". It usually fetches data from the bureau associated with your PAN number automatically if you have used GPay for financial transactions.
+
 ## What is a Good Score?
 
 *   **750 - 900:** **Excellent.** You will get the best loan offers.

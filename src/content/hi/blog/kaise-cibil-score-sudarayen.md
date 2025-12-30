@@ -1,9 +1,9 @@
 ---
 title: "CIBIL Score कैसे सुधारें? (10-Step Guide for 2025)"
 date: "2025-12-10"
-description: "CIBIL Score सुधारना चाहते हैं? यह 10-कदमों वाली गाइड आपको बताएगी कि अपनी रिपोर्ट की जाँच कैसे करें, गलतियों को कैसे सुधारें, और एक अच्छा क्रेडिट स्कोर कैसे बनाएं।"
+description: "CIBIL Score सुधारना चाहते हैं? जानें CIBIL kaise sudhare (सिबिल कैसे सुधारें)। यह 10-कदमों वाली गाइड आपको बताएगी कि अपनी रिपोर्ट की जाँच कैसे करें और स्कोर कैसे बढ़ाएं।"
 slug: "kaise-cibil-score-sudarayen"
-tags: ["cibil score", "सुधार", "credit score", "credit repair", "hindi"]
+tags: ["cibil score", "सुधार", "credit score", "credit repair", "hindi", "cibil kaise sudhare"]
 image: "/og-image.jpg"
 ---
 

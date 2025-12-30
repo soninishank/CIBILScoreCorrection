@@ -7,6 +7,7 @@ export default function Footer() {
                     <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
                 </div>
                 <div className="flex gap-6">
+                    <a href="/about" className="hover:text-white transition-colors">About Us</a>
                     <a href="#" className="hover:text-white transition-colors">Facebook</a>
                     <a href="#" className="hover:text-white transition-colors">Twitter</a>
                     <a href="#" className="hover:text-white transition-colors">LinkedIn</a>

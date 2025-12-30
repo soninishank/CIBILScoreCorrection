@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "CIBIL", "CIBIL score", "credit repair", "credit report", "loan assistance", "CIBIL सुधार",
     "cibil full form", "free cibil score", "cibil report", "cibil dispute", "paisabazaar cibil",
     "consumer cibil", "cibil score check", "transunion cibil",
-    "सिबिल स्कोर चेक ऑनलाइन फ्री", "cibil score kaise check kare", "cibil score kaise check kare mobile se",
-    "mera cibil score kitna hai", "cibil check karne wala app", "cibil score kaise check kare in hindi",
-    "cibil score kaise check hota hai", "आधार कार्ड से सिविल कैसे चेक करें"
+    "cibil score check free online by pan number", "check cibil score free", "sbi cibil score check free",
+    "check cibil score by pan card without otp", "paisabazaar cibil score free", "how to check cibil score in gpay",
+    "sbi cibil score check online", "how to check cibil score in phonepe"
   ],
   openGraph: {
     title: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",

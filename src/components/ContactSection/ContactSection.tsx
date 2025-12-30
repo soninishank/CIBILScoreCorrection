@@ -4,6 +4,7 @@ import { useState } from "react";
 import PaymentButton from "@/components/Payment/PaymentButton";
 
 import Image from "next/image";
+import { CONTACT_PHONE_DISPLAY, WHATSAPP_LINK } from "@/constants";
 
 type ContactSectionProps = {
   lang: "en" | "hi";
@@ -135,45 +136,51 @@ export default function ContactSection({ lang }: ContactSectionProps) {
 
 
   return (
-    <section id="contact" className="w-full py-24 bg-gray-100 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+    <section id="contact" className="w-full py-24 bg-white px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Decorative bg */}
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 z-0"></div>
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-indigo-50 rounded-full blur-3xl opacity-50 z-0"></div>
+
+      <div className="max-w-4xl mx-auto text-center mb-16 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
           {t.title}
         </h2>
-        <p className="text-xl text-gray-600">{t.desc}</p>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">{t.desc}</p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* left: compact profile — tighter spacing */}
-        <div className="flex flex-col items-center text-center">
-          <Image
-            src="/profile.jpg"
-            alt="CA Anurag Tripathi"
-            width={128}
-            height={128}
-            className="w-32 h-32 rounded-full object-cover shadow-2xl mb-6"
-          />
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch relative z-10">
+        {/* left: compact profile — enhanced */}
+        <div className="flex flex-col items-center text-center bg-gradient-to-br from-white to-blue-50 p-8 rounded-3xl border border-blue-100 shadow-xl">
+          <div className="relative w-40 h-40 mb-6">
+            <Image
+              src="/profile.jpg"
+              alt="CA Anurag Tripathi"
+              width={160}
+              height={160}
+              className="w-40 h-40 rounded-full object-cover shadow-2xl border-4 border-white"
+            />
+          </div>
 
-          <div className="text-center">
-            <div className="text-2xl font-bold text-gray-900">CA Anurag Tripathi</div>
-            <div className="text-lg text-gray-600 mb-6">Chartered Accountant</div>
+          <div className="text-center w-full">
+            <div className="text-3xl font-bold text-gray-900 mb-1">CA Anurag Tripathi</div>
+            <div className="text-lg text-primary font-medium mb-8 bg-blue-100/50 inline-block px-4 py-1 rounded-full">Chartered Accountant</div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
               <a
-                href="tel:+918290264071"
-                className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg"
+                href={`tel:${CONTACT_PHONE_DISPLAY}`}
+                className="flex items-center justify-center gap-3 bg-white text-gray-900 border border-gray-200 px-6 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm hover:shadow-md"
               >
-                +91 82902 64071
+                <span>📞</span> {CONTACT_PHONE_DISPLAY}
               </a>
 
               <a
-                href="https://wa.me/918290264071"
-                className="inline-block bg-secondary text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-secondary-dark transition shadow-lg"
+                href={WHATSAPP_LINK}
+                className="flex items-center justify-center gap-3 bg-green-500 text-white px-6 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1"
               >
                 {t.whatsappText}
               </a>
 
-              <div className="pt-2">
+              <div className="pt-4 border-t border-gray-100 mt-2">
                 <PaymentButton amount={1499} description="CIBIL consultation fee ₹1499" />
               </div>
             </div>
@@ -181,7 +188,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
         </div>
 
         {/* right: form */}
-        <div className="bg-white rounded-xl shadow-2xl p-8">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100">
           <form
             id="contactForm"
             onSubmit={handleSubmit}
@@ -196,7 +203,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder={t.formName}
-                className="border border-gray-300 p-4 rounded-lg w-full bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="border border-gray-200 p-4 rounded-xl w-full bg-gray-50 text-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                 required
               />
             </div>
@@ -210,7 +217,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 onChange={(e) => setPhone(e.target.value)}
                 type="tel"
                 placeholder={t.formPhone}
-                className="border border-gray-300 p-4 rounded-lg w-full bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="border border-gray-200 p-4 rounded-xl w-full bg-gray-50 text-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                 required
               />
             </div>
@@ -223,7 +230,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder={t.formMessage}
-                className="border border-gray-300 p-4 rounded-lg w-full h-40 bg-gray-100 text-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="border border-gray-200 p-4 rounded-xl w-full h-40 bg-gray-50 text-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
                 required
               />
             </div>
@@ -231,13 +238,13 @@ export default function ContactSection({ lang }: ContactSectionProps) {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg"
+              className="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary-dark transition-all shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? t.sending : t.submit}
             </button>
 
-            {statusMsg && <div className="text-green-700 mt-2 text-center">{statusMsg}</div>}
-            {error && <div className="text-red-600 mt-2 text-center">{error}</div>}
+            {statusMsg && <div className="p-3 rounded-lg bg-green-50 text-green-700 mt-2 text-center font-medium border border-green-100">{statusMsg}</div>}
+            {error && <div className="p-3 rounded-lg bg-red-50 text-red-600 mt-2 text-center font-medium border border-red-100">{error}</div>}
           </form>
         </div>
       </div>

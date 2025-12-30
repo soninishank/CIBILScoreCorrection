@@ -12,10 +12,12 @@ export const metadata: Metadata = {
   keywords: [
     "CIBIL", "CIBIL score", "credit repair", "credit report", "loan assistance", "CIBIL सुधार",
     "cibil full form", "free cibil score", "cibil report", "cibil dispute", "paisabazaar cibil",
-    "consumer cibil", "cibil score check", "transunion cibil",
+    "consumer cibil", "cibil score check", "transunion cibil", "CIBIL kaise sudhare",
     "सिबिल स्कोर चेक ऑनलाइन फ्री", "cibil score kaise check kare", "cibil score kaise check kare mobile se",
     "mera cibil score kitna hai", "cibil check karne wala app", "cibil score kaise check kare in hindi",
-    "cibil score kaise check hota hai", "आधार कार्ड से सिविल कैसे चेक करें"
+    "cibil score kaise check hota hai", "आधार कार्ड से सिविल कैसे चेक करें",
+    "निःशुल्क CIBIL स्कोर और रिपोर्ट", "फ्री सिबिल स्कोर और रिपोर्ट", "मुफ़्त CIBIL स्कोर और क्रेडिट रिपोर्ट ऑनलाइन देखें",
+    "अपने क्रेडिट स्वास्थ्य पर नियंत्रण रखें"
   ],
   openGraph: {
     title: "CIBIL Thik Kare — Improve Your CIBIL Score Fast",
