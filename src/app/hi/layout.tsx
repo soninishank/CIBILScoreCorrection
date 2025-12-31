@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { GOOGLE_ANALYTICS_ID } from "@/constants";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -67,8 +68,8 @@ export default function HindiRootLayout({
                 <main className="pt-20">
                     {children}
                 </main>
-                <Footer />
-                <GoogleAnalytics gaId="G-PLACEHOLDER" />
+                <Footer lang="hi" />
+                <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
             </body>
         </html>
     );

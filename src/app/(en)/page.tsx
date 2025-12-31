@@ -11,8 +11,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CIBIL Thik Kare",
-    "url": "https://cibilthikkare.in",
-    "logo": "https://cibilthikkare.in/logo.png",
+    "url": "https://www.cibilthikkare.in",
+    "logo": "https://www.cibilthikkare.in/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": CONTACT_PHONE_DISPLAY,

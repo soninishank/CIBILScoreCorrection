@@ -65,7 +65,7 @@ export default function Stats({ lang }: StatsProps) {
     const stats = content[lang];
 
     return (
-        <section className="py-16 bg-white border-b border-gray-100">
+        <section id="about" className="py-16 bg-white border-b border-gray-100">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {stats.map((stat, index) => (
