@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPostsMeta } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.cibilthikkare.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.cibilthikkare.in";
 
   const enPosts = getAllPostsMeta("en").map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
