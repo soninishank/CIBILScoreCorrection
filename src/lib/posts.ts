@@ -12,6 +12,7 @@ export type PostMeta = {
   slug: string;
   tags?: string[];
   image?: string;
+  faq?: { question: string; answer: string }[];
 };
 
 const CONTENT_ROOT = path.join(process.cwd(), "src", "content");
@@ -50,6 +51,7 @@ export function getAllPostsMeta(lang: "en" | "hi"): PostMeta[] {
       slug: String(data.slug || file.replace(/\.md$/, "")),
       tags: data.tags || [],
       image: data.image || "",
+      faq: data.faq || [],
     };
     return meta;
   });
@@ -79,6 +81,7 @@ export async function getPostBySlug(lang: "en" | "hi", slug: string) {
     slug: String(data.slug || slug),
     tags: data.tags || [],
     image: data.image || "",
+    faq: data.faq || [],
   };
 
   return { meta, content: htmlContent, rawContent };

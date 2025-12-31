@@ -5,7 +5,9 @@ export default function Footer({ lang = 'en' }: { lang?: 'en' | 'hi' }) {
             <div className="max-w-6xl mx-auto flex justify-between items-center">
                 <div>
                     <p className="text-lg font-bold text-white">CIBIL Thik Kare</p>
-                    <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
+                    <p className="text-sm text-gray-500 mt-1">CA Anurag Tripathi – ICAI Registered</p>
+                    <p className="text-sm text-gray-400">10+ Years Experience • 1000+ Happy Clients</p>
+                    <p className="text-sm mt-4">&copy; {new Date().getFullYear()} All rights reserved.</p>
                 </div>
                 <div className="flex gap-6">
                     <a href={isHindi ? "/hi#about" : "/#about"} className="hover:text-white transition-colors">About Us</a>

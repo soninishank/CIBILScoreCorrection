@@ -9,7 +9,7 @@ export default function Services({ lang }: ServicesProps) {
       items: [
         {
           title: "CIBIL Score Improvement",
-          desc: "<ul><li>Personalized guidance to increase your score</li><li>Quickly and safely improve your credit health</li></ul>",
+          desc: "<ul><li>Personalized guidance to <a href='/blog/5-easy-ways-improve-cibil' class='text-primary hover:underline'>improve cibil score</a></li><li>Quickly and safely improve your credit health</li></ul>",
         },
         {
           title: "Taxation Services",
@@ -25,7 +25,7 @@ export default function Services({ lang }: ServicesProps) {
         },
         {
           title: "Loan & Funding Support",
-          desc: "<ul><li>Support for Retail, Business, and Home Loans</li><li>Preparation of project reports and CMA data</li><li>Financial ratio analysis to improve loan eligibility</li></ul>",
+          desc: "<ul><li>Support for Retail, Business, and Home Loans</li><li>Preparation of project reports and CMA data</li><li>Fix <a href='/blog/why-cibil-score-dropped' class='text-primary hover:underline'>loan rejection due to cibil</a></li></ul>",
         },
         {
           title: "Business Registration & Compliance",

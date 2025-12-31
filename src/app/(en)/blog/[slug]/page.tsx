@@ -93,8 +93,29 @@ export default async function PostPage(props: Props) {
     "author": {
       "@type": "Person",
       "name": "CA Anurag Tripathi"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CIBIL Thik Kare",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${process.env.NEXT_PUBLIC_SITE_URL || ''}/logo.png`
+      }
     }
   };
+
+  const faqJsonLd = meta.faq && meta.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": meta.faq.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 font-sans">
@@ -102,6 +123,12 @@ export default async function PostPage(props: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-2/3">
